@@ -41,7 +41,7 @@ export function Experience() {
                     </div>
                     <div className="text-right">
                       <span className="text-sm text-muted-foreground">Remote</span>
-                      <p className="text-sm text-muted-foreground mt-1">Dec 2024 - Present</p>
+                      <p className="text-sm text-muted-foreground mt-1">July 2024 - August 2024</p>
                     </div>
                   </div>
                   <ul className="mt-4 space-y-2 text-sm text-muted-foreground list-disc list-inside">
