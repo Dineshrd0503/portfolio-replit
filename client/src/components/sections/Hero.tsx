@@ -24,11 +24,11 @@ export function Hero() {
           variants={fadeIn}
           className="mb-8"
         >
-          <div className="relative w-40 h-40 mx-auto mb-6">
+          <div className="relative w-48 h-48 sm:w-56 sm:h-56 mx-auto mb-8 group">
             <img
               src="/profile.jpg"
               alt="Rajasekhar Dinesh"
-              className="rounded-full w-full h-full object-cover border-4 border-primary/20 shadow-xl"
+              className="rounded-full w-full h-full object-cover border-4 border-primary/20 shadow-xl transition-transform duration-300 group-hover:scale-105"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.onerror = null;
