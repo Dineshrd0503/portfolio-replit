@@ -1,14 +1,34 @@
 import { motion } from "framer-motion";
 import { fadeIn, staggerChildren } from "@/lib/animations";
-import { SiReact, SiTypescript, SiNodedotjs, SiTailwindcss, SiPostgresql, SiDocker } from "react-icons/si";
+import { DiJava, DiPython } from "react-icons/di";
+import { SiSpringboot, SiMysql, SiGit, SiHtml5, SiIntellijidea, SiCplusplus } from "react-icons/si";
+import { Card, CardContent } from "@/components/ui/card";
 
-const skills = [
-  { name: "React", icon: SiReact, color: "text-[#61DAFB]" },
-  { name: "TypeScript", icon: SiTypescript, color: "text-[#3178C6]" },
-  { name: "Node.js", icon: SiNodedotjs, color: "text-[#339933]" },
-  { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-[#06B6D4]" },
-  { name: "PostgreSQL", icon: SiPostgresql, color: "text-[#4169E1]" },
-  { name: "Docker", icon: SiDocker, color: "text-[#2496ED]" },
+const skillCategories = [
+  {
+    title: "Programming Languages",
+    skills: [
+      { name: "Java", icon: DiJava, color: "text-[#007396]" },
+      { name: "Python", icon: DiPython, color: "text-[#3776AB]" },
+      { name: "C", icon: SiCplusplus, color: "text-[#00599C]" },
+    ]
+  },
+  {
+    title: "Technologies & Frameworks",
+    skills: [
+      { name: "Spring Boot", icon: SiSpringboot, color: "text-[#6DB33F]" },
+      { name: "MySQL", icon: SiMysql, color: "text-[#4479A1]" },
+      { name: "HTML/CSS", icon: SiHtml5, color: "text-[#E34F26]" },
+    ]
+  },
+  {
+    title: "Developer Tools",
+    skills: [
+      { name: "IntelliJ", icon: SiIntellijidea, color: "text-[#000000]" },
+      { name: "Git", icon: SiGit, color: "text-[#F05032]" },
+      { name: "GitHub", icon: SiGit, color: "text-[#181717]" },
+    ]
+  }
 ];
 
 export function Skills() {
@@ -33,22 +53,23 @@ export function Skills() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={staggerChildren}
-          className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none"
+          className="mx-auto mt-16 max-w-2xl space-y-16 sm:mt-20 lg:mt-24 lg:max-w-none"
         >
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-            {skills.map((skill) => (
-              <motion.div
-                key={skill.name}
-                variants={fadeIn}
-                className="flex flex-col items-center"
-              >
-                <dt className="text-center">
-                  <skill.icon className={`h-16 w-16 ${skill.color}`} />
-                  <p className="mt-4 text-lg font-semibold leading-7">{skill.name}</p>
-                </dt>
-              </motion.div>
-            ))}
-          </dl>
+          {skillCategories.map((category) => (
+            <motion.div key={category.title} variants={fadeIn}>
+              <h3 className="text-xl font-semibold mb-8 text-center">{category.title}</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {category.skills.map((skill) => (
+                  <Card key={skill.name} className="group hover:shadow-lg transition-all">
+                    <CardContent className="p-6 flex flex-col items-center text-center">
+                      <skill.icon className={`h-12 w-12 ${skill.color} group-hover:scale-110 transition-transform`} />
+                      <p className="mt-4 font-medium">{skill.name}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>
