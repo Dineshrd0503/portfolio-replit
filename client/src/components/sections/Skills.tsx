@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeIn, staggerChildren } from "@/lib/animations";
 import { DiJava, DiPython } from "react-icons/di";
-import { SiSpringboot, SiMysql, SiGit, SiHtml5, SiIntellijidea, SiCplusplus } from "react-icons/si";
+import { SiSpringboot, SiMysql, SiGit, SiHtml5, SiIntellijidea, SiCplusplus, SiGithub } from "react-icons/si";
 import { Card, CardContent } from "@/components/ui/card";
 
 const skillCategories = [
@@ -26,7 +26,7 @@ const skillCategories = [
     skills: [
       { name: "IntelliJ", icon: SiIntellijidea, color: "text-[#000000]" },
       { name: "Git", icon: SiGit, color: "text-[#F05032]" },
-      { name: "GitHub", icon: SiGit, color: "text-[#181717]" },
+      { name: "GitHub", icon: SiGithub, color: "text-[#181717]" },
     ]
   }
 ];

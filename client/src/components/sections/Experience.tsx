@@ -39,10 +39,12 @@ export function Experience() {
                       <h3 className="font-semibold text-lg">Java Developer Intern</h3>
                       <p className="text-muted-foreground">Nexus Logic Technologies</p>
                     </div>
-                    <span className="text-sm text-muted-foreground">Remote</span>
+                    <div className="text-right">
+                      <span className="text-sm text-muted-foreground">Remote</span>
+                      <p className="text-sm text-muted-foreground mt-1">Dec 2024 - Present</p>
+                    </div>
                   </div>
-                  <ul className="mt-4 space-y-2 text 
--sm text-muted-foreground list-disc list-inside">
+                  <ul className="mt-4 space-y-2 text-sm text-muted-foreground list-disc list-inside">
                     <li>Designed and developed an Inventory Management System using Java, SQL, JDBC</li>
                     <li>Developed the backend using MYSQL Database and JDBC to handle the CRUD operations</li>
                     <li>Connected the backend to a MySQL database using JDBC enabling faster retrievals and included the Prepared Statements to prevent SQL Injection attacks</li>
