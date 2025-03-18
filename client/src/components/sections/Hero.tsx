@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/animations";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, FileDown } from "lucide-react";
 
 export function Hero() {
   return (
@@ -36,11 +36,28 @@ export function Hero() {
           initial="hidden"
           animate="visible"
           variants={fadeIn}
-          className="mt-10 flex items-center justify-center gap-x-6"
+          className="mt-10 flex flex-col items-center gap-6"
         >
-          <Button asChild className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90">
-            <a href="#contact">Get in touch</a>
-          </Button>
+          <div className="flex items-center gap-4">
+            <Button asChild className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90">
+              <a href="#contact">Get in touch</a>
+            </Button>
+            <Button 
+              variant="outline" 
+              asChild
+              className="gap-2 hover:bg-primary/5"
+            >
+              <a 
+                href="https://drive.google.com/file/d/12QrQWiIBIfuWlHRHSe-PrPuWyBYT8nFa/view?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <FileDown className="h-4 w-4" />
+                Download Resume
+              </a>
+            </Button>
+          </div>
+
           <div className="flex gap-4 items-center">
             <Button variant="outline" size="icon" asChild>
               <a href="http://Github.com/Dineshrd0503" target="_blank" rel="noopener noreferrer">
