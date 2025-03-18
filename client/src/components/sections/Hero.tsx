@@ -26,9 +26,14 @@ export function Hero() {
         >
           <div className="relative w-40 h-40 mx-auto mb-6">
             <img
-              src="/IMG_20241025_215711.jpg"
-              alt="Profile"
+              src="/profile.jpg"
+              alt="Rajasekhar Dinesh"
               className="rounded-full w-full h-full object-cover border-4 border-primary/20 shadow-xl"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.onerror = null;
+                target.style.display = 'none';
+              }}
             />
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/10 to-blue-600/10 animate-pulse" />
           </div>
@@ -50,14 +55,14 @@ export function Hero() {
             <Button asChild className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90">
               <a href="#contact">Get in touch</a>
             </Button>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               asChild
               className="gap-2 hover:bg-primary/5"
             >
-              <a 
-                href="https://drive.google.com/file/d/12QrQWiIBIfuWlHRHSe-PrPuWyBYT8nFa/view?usp=sharing" 
-                target="_blank" 
+              <a
+                href="https://drive.google.com/file/d/12QrQWiIBIfuWlHRHSe-PrPuWyBYT8nFa/view?usp=sharing"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <FileDown className="h-4 w-4" />
