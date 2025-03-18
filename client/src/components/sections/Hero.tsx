@@ -24,6 +24,14 @@ export function Hero() {
           variants={fadeIn}
           className="mb-8"
         >
+          <div className="relative w-40 h-40 mx-auto mb-6">
+            <img
+              src="/IMG_20241025_215711.jpg"
+              alt="Profile"
+              className="rounded-full w-full h-full object-cover border-4 border-primary/20 shadow-xl"
+            />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/10 to-blue-600/10 animate-pulse" />
+          </div>
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
             Rajasekhar Dinesh
           </h1>
